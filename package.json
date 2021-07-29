@@ -1,0 +1,18 @@
+{
+  "name": "wetherappnodejs",
+  "version": "1.0.0",
+  "description": "creating a nodejs app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon index.js"
+  },
+  "author": "Rajesh Kushwaha",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12",
+    "requests": "^0.3.0"
+  }
+}
