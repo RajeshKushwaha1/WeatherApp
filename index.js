@@ -19,13 +19,14 @@ app.get("/", (req, res)=>{
             res.render('home', {
                         location: jsonBody.name,
                         country: jsonBody.sys.country,
-                        temprature: jsonBody.main.temp,
-                        tMin: jsonBody.main.temp_min,
-                        tMax: jsonBody.main.temp_max
+                        temprature: Math.round(jsonBody.main.temp -273),
+                        tMin: Math.round(jsonBody.main.temp_min -273),
+                        tMax: Math.round(jsonBody.main.temp_max-273)
                     })
         })
     })
 })
-app.listen(8000, "127.0.0.1", () => {
-    console.log(`server is running on port🚀: 8000`)
+const PORT = process.env.PORT || 8000;
+app.listen(PORT, () => {
+    console.log(`server is running on port🚀: ${PORT}`)
 });
