@@ -34,9 +34,12 @@
     <script>
     const dNode = document.querySelector('#date');
     
-    const date = new Date();
-    let time = date.toISOString().split('T')[1].split('.')[0]
+    setInterval(()=>{
+        const date = new Date(Date.now());
+        let time = date.toTimeString().split(' ')[0]
         dNode.innerHTML = `${date.toDateString()} |  ${time}`
+    },100);
+   
     </script>
 </body>
 

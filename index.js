@@ -15,7 +15,7 @@ app.get("/", (req, res)=>{
         });
         response.on('end', ()=>{
             let jsonBody = JSON.parse(body);
-            console.log(jsonBody);
+            // console.log(jsonBody);
             res.render('home', {
                         location: jsonBody.name,
                         country: jsonBody.sys.country,
